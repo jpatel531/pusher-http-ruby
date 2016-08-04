@@ -325,6 +325,12 @@ module Pusher
       notification_client.notify(interests, data)
     end
 
+
+    def live_store(name)
+      Pusher::LiveStore.new(name, @app_id, @host, @port, @scheme, self)
+    end
+
+
     # Generate the expected response for an authentication endpoint.
     # See http://pusher.com/docs/authenticating_users for details.
     #
