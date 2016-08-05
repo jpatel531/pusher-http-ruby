@@ -326,7 +326,7 @@ module Pusher
     end
 
 
-    def live_store(name)
+    def livestore(name)
       Pusher::LiveStore.new(name, @app_id, @host, @port, @scheme, self)
     end
 
